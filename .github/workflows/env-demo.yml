@@ -1,0 +1,15 @@
+name: Env Demo
+
+on:
+  push:
+    branches: [ "main"]
+
+jobs:
+  env-demo:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_ENV: staging
+
+    steps:
+      - name: Exibir variavel no log
+        run: echo "DEPLOY_ENV=$DEPLOY_ENV"
